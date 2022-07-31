@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;400;600;700&display=swap');
+
+:root{
+    /*Dark theme*/
+    --Very-Dark-Blue: hsl(230, 17%, 14%);
+    --Very-Dark-Blue-dos: hsl(232, 19%, 15%);
+    --Dark-Desaturated-Blue: hsl(228, 28%, 20%);
+    --Desaturated-Blue: hsl(228, 34%, 66%);
+    --White-Text: hsl(0, 0%, 100%);
+    --Toggle:  hsl(210, 78%, 56%); 
+    --Toggle-dos:  hsl(146, 68%, 55%);
+    
+    /*Light theme*/
+    --White-BG: hsl(0, 0%, 100%);
+    --Very-Pale-Blue-Top-BG-Pattern: hsl(225, 100%, 98%);
+    --Light-Grayish-Blue-Card-BG: hsl(227, 47%, 96%);
+    --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
+    --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
+    --Toggle-tres: hsl(230, 22%, 74%);
+
+    /* primary*/
+    --Lime-Green: hsl(163, 72%, 41%);
+    --Bright-Red: hsl(356, 69%, 56%);
+
+   --Facebook: hsl(208, 92%, 53%);
+   --Twitter: hsl(203, 89%, 53%);
+   --Instagram:  hsl(37, 97%, 70%);
+   --Instagram-dos: hsl(329, 70%, 58%);
+   --YouTube: hsl(348, 97%, 39%);
+   
+    
+}
+/*reset*/
+*, *::before, *::after {
+     box-sizing: border-box;
+}
+
+h1,h2,h3,p{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+html {
+    font-size: 14px;
+}
+img {
+    display: block;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    padding: 45px 25px;
+    background-color: var(--Very-Dark-Blue);
+    color: var(--White-Text);
+}
+
+/*Header*/
+.header__title{
+    font-size: 1.6rem;
+    margin-bottom: 0.3em;
+    color: var(--White-Text);
+
+
+}
+.header__info {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+
+}
+.header__hr{
+ border: none;
+ border-top: 1px solid var(--Light-Grayish-Blue-Card-BG);
+ opacity: 0.2;
+ margin-bottom: 1.5em;
+}
+
+.darklight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.2em;
+}
+
+.darklight__label{
+    font-size: 1rem;
+}
+
+.toggle {
+    width: 50px;
+    aspect-ratio: 2;
+    background-image: linear-gradient(to right, var(--Toggle), var(--Toggle-dos) );
+    border-radius: 15px;
+    padding: 3px;
+    cursor: pointer;
+   
+}
+
+.toggle__circle{
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 15px;
+}
+
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8em;
+}
+
+.principal__card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--Dark-Desaturated-Blue);
+    gap: 1.4em;
+    padding: 2.5em 0 1.6em;
+    border-radius: 0.3em;
+    position: relative;
+    overflow: hidden;
+}
+.principal__card::before{
+    content: '' ;
+    width: 100%;
+    position: absolute;
+    height: 0.3em;
+   
+    top: 0;
+}
+
+.principal__card:nth-child(1)::before{
+    background-color: var(--Facebook);
+}
+
+.principal__card:nth-child(2)::before{
+    background-color: var(--Twitter);
+}
+
+.principal__card:nth-child(3)::before{
+    background-image: linear-gradient(to right, var(--Instagram), var(--Instagram-dos)) 
+}
+
+.principal__card:nth-child(4)::before{
+    background-color: var(--YouTube);
+}
+.principal-card__header{
+    display: flex;
+    gap: 0.6em;
+    align-items: flex-end;
+
+}
+.principal-card__username{
+    font-size: 0.9rem;
+}
+.principal-card__number{
+    font-size: 3.8rem;
+    color: var(--White-Text);
+    font-weight: 600;
+    text-align: center;
+}
+
+.principal-card__label{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.principal-card__footer{
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+.principal-card__estadisticas{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--White-Text);
+}
+.up {
+    color: var(--Lime-Green);
+}
+
+.down{
+    color: var(--Bright-Red);
+}

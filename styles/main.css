@@ -187,3 +187,33 @@ body {
 .down{
     color: var(--Bright-Red);
 }
+
+/*-Section Overview*/
+
+.overview {
+   margin-top: 3.5em;
+  
+}
+
+.overview__container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2em;
+
+}
+
+.overview__title{
+    color: var(--White-Text);
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1em;
+}
+
+.overview__card{
+    width: 100%;
+    background-color: var(--Dark-Desaturated-Blue);
+    border-radius: 0.4em;
+    padding: 2em 1.8em;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+}

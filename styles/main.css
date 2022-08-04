@@ -9,6 +9,7 @@
     --White-Text: hsl(0, 0%, 100%);
     --Toggle:  hsl(210, 78%, 56%); 
     --Toggle-dos:  hsl(146, 68%, 55%);
+    --hover-card: brightness(1.2);
     
     /*Light theme*/
     --White-BG: hsl(0, 0%, 100%);
@@ -17,6 +18,7 @@
     --Dark-Grayish-Blue-Text: hsl(228, 12%, 44%);
     --Very-Dark-Blue-Text: hsl(230, 17%, 14%);
     --Toggle-tres: hsl(230, 22%, 74%);
+    
 
     /* primary*/
     --Lime-Green: hsl(163, 72%, 41%);
@@ -28,7 +30,15 @@
    --Instagram-dos: hsl(329, 70%, 58%);
    --YouTube: hsl(348, 97%, 39%);
    
-    
+
+
+}
+
+.light__mode{
+    background-color: var(--White-BG);
+    color: var(--Dark-Grayish-Blue-Text);
+    --hover-card: brightness(0.8);
+
 }
 /*reset*/
 *, *::before, *::after {
@@ -100,16 +110,24 @@ body {
     aspect-ratio: 1;
     background-color: var(--Very-Dark-Blue);
     border-radius: 15px;
+    transition: transform 200ms ease;
+}
+
+.toggle__circle-right{
+    transform: translate(calc(50px - 6px - 100%));
+    transition: transform 200ms ease;
 }
 
 .principal{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.8em;
 }
 
 .principal__card{
     width: 100%;
+    max-width: 325px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,6 +137,10 @@ body {
     border-radius: 0.3em;
     position: relative;
     overflow: hidden;
+}
+.principal__card:hover{
+    filter: var(--hover-card)
+    
 }
 .principal__card::before{
     content: '' ;
@@ -198,6 +220,7 @@ body {
 .overview__container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 1.2em;
 
 }
@@ -211,9 +234,88 @@ body {
 
 .overview__card{
     width: 100%;
+    max-width: 325px;
     background-color: var(--Dark-Desaturated-Blue);
     border-radius: 0.4em;
     padding: 2em 1.8em;
     display: grid;
     grid-template-columns: repeat(2, auto);
+    row-gap: 1.6em;
+}
+
+.overview__card:hover{
+    filter: var(--hover-card);
+}
+
+.overview__card-logo,
+.overview__card-statics{
+    justify-self: end;
+}
+
+.overview__card-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.overview__card-number{
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--White-Text);
+}
+.overview__card-statics{
+    align-self: end;
+    display: flex;
+    gap: 0.3em;
+    align-items: center;
+}
+
+.overview__card-statics-label{
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.attribution{
+    margin-top: 2em;
+    color: var(--White-Text);
+
+}
+
+/*MdiaQuery*/
+
+@media (min-width: 720px) {
+
+    .header,
+    .main{
+        max-width: 1076px;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+    .header{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        margin-bottom: 2em;
+    }
+    .darklight{
+        margin-bottom: 0;
+        justify-content: flex-end;
+        gap: 1em;
+    }
+    .header__hr{
+        display: none;
+    }
+    .header__info{
+        grid-column: 1 / 2 ;
+        grid-row: 2 / 3;
+    }
+    .overview__container{
+        gap: 1.8em;
+    }
+    .principal__card{
+        max-width: 250px;
+    }
+    .overview__card{
+        max-width: 250px;
+    }
+    
 }

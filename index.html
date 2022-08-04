@@ -14,7 +14,7 @@
 
     <title>Frontend Mentor | [Challenge Name Here]</title>
     <link rel="stylesheet" href="./styles/main.css" />
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="./script/script.js" defer></script>
   </head>
   <body>
     <!--header-->
@@ -23,9 +23,9 @@
       <p class="header__info">Total Followers: 23,004</p>
       <hr class="header__hr">
       <article class="darklight">
-        <h2 class="darklight__label">Dark Mode</h2>
-        <div class="toggle">
-          <div class="toggle__circle"></div>
+        <h2 id="toggle__label" class="darklight__label">Dark Mode</h2>
+        <div id="toggle" class="toggle">
+          <div id="toggle-circle" class="toggle__circle "></div>
         </div>
       </article>
     </header>
@@ -140,7 +140,7 @@
             <img class="overview__card-logo" src="./images/icon-facebook.svg" alt="icon-facebook">
             <p class="overview__card-number">87</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-up.svg" alt="arrowhead">
+              <img class="overview__card-statics-img up" src="./images/icon-up.svg" alt="arrowhead">
               <p class="overview__card-statics-label">3%</p>
             </div>
           </article>
@@ -151,7 +151,7 @@
             <img class="overview__card-logo" src="./images/icon-facebook.svg" alt="icon-facebook">
             <p class="overview__card-number">52</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-up.svg" alt="arrowhead">
+              <img class="overview__card-statics-img up" src="./images/icon-up.svg" alt="arrowhead">
               <p class="overview__card-statics-label">2%</p>
             </div>
           </article>
@@ -162,7 +162,7 @@
             <img class="overview__card-logo" src="./images/icon-instagram.svg" alt="icon-instagram">
             <p class="overview__card-number">5462</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-up.svg" alt="arrowhead">
+              <img class="overview__card-statics-img up" src="./images/icon-up.svg" alt="arrowhead">
               <p class="overview__card-statics-label">2267%</p>
             </div>
           </article>
@@ -173,7 +173,7 @@
             <img class="overview__card-logo" src="./images/icon-instagram.svg" alt="icon-instagram">
             <p class="overview__card-number">52K</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-up.svg" alt="arrowhead">
+              <img class="overview__card-statics-img up" src="./images/icon-up.svg" alt="arrowhead">
               <p class="overview__card-statics-label">1375%</p>
             </div>
           </article>
@@ -184,7 +184,7 @@
             <img class="overview__card-logo" src="./images/icon-twitter.svg" alt="icon-twitter">
             <p class="overview__card-number">117</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-up.svg" alt="arrowhead">
+              <img class="overview__card-statics-img up" src="./images/icon-up.svg" alt="arrowhead">
               <p class="overview__card-statics-label">303%</p>
             </div>
           </article>
@@ -195,7 +195,7 @@
             <img class="overview__card-logo" src="./images/icon-twitter.svg" alt="icon-twitter">
             <p class="overview__card-number">507</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-up.svg" alt="arrowhead">
+              <img class="overview__card-statics-img up" src="./images/icon-up.svg" alt="arrowhead">
               <p class="overview__card-statics-label">553%</p>
             </div>
           </article>
@@ -206,7 +206,7 @@
             <img class="overview__card-logo" src="./images/icon-youtube.svg" alt="icon-youtube">
             <p class="overview__card-number">107</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-down.svg" alt="arrow-down">
+              <img class="overview__card-statics-img down" src="./images/icon-down.svg" alt="arrow-down">
               <p class="overview__card-statics-label">19%</p>
             </div>
           </article>
@@ -217,7 +217,7 @@
             <img class="overview__card-logo" src="./images/icon-youtube.svg" alt="icon-youtube">
             <p class="overview__card-number">1407</p>
             <div class="overview__card-statics">
-              <img class="overview__card-statics-img" src="./images/icon-down.svg" alt="arrow-down">
+              <img class="overview__card-statics-img down" src="./images/icon-down.svg" alt="arrow-down">
               <p class="overview__card-statics-label">12%</p>
             </div>
           </article>
@@ -233,7 +233,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Joel Parra</a>.
     </div>
   </body>
 </html>

@@ -35,9 +35,13 @@
 }
 
 .light__mode{
-    background-color: var(--White-BG);
-    color: var(--Dark-Grayish-Blue-Text);
+    
+    
     --hover-card: brightness(0.8);
+    --Very-Dark-Blue: hsl(0, 0%, 100%);
+    --White-Text: hsl(230, 17%, 14%);
+    --Dark-Desaturated-Blue: hsl(227, 47%, 96%);
+    
 
 }
 /*reset*/
@@ -275,6 +279,9 @@ body {
 }
 
 .attribution{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 2em;
     color: var(--White-Text);
 
